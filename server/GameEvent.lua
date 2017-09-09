@@ -4,7 +4,7 @@ GameEvents.players = ArrayList();
 function GameEvent:init()
     super.init(self)
     
-    print("GameEvents iniciado!")
+    print("GameEvents: init")
     
     self.eventHandler = function(player, commandName, eventType, map)
         if (eventType == 1) then
@@ -19,10 +19,4 @@ end
 function GameEvent.onPlayerEnter(event, player)
       GameEvent.players:add(player)
 end
-
--- classe gungame teste --
-
-local super = Class("GunGame", GameEvent, function()
-    
-end).getSuperclass()
 
